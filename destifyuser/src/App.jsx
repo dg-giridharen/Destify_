@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom'; // Import useLocation
 
-import HomePage from './pages/Homepage/HomePage.jsx';
+import HomePage from './pages/HomePage/HomePage.jsx';
 import DestinationsPage from './pages/DestinationPage/DestinationsPage.jsx';
 import ContactPage from './pages/ContactPage/ContactPage.jsx';
 import AboutPage from './pages/AboutPage/AboutPage.jsx';
