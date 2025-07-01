@@ -24,7 +24,7 @@ const DestinationsPage = () => {
       discount: ''
   });
   
-  const url = "http://localhost:4000";
+  const url = "https://destify-backend-fxy3.onrender.com";
   const location = useLocation(); // Hook to access URL parameters
 
   // Fetch all destinations and apply filters from URL on initial load
