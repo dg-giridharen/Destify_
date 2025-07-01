@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 const Dashboard = () => {
     // Renamed state to 'allBookings' to clearly indicate it holds all fetched bookings
     const [allBookings, setAllBookings] = useState([]); 
-    const url = "http://localhost:4000";
+    const url = "https://destify-backend-fxy3.onrender.com";
 
     useEffect(() => {
         const fetchAllBookings = async () => {
