@@ -1,0 +1,64 @@
+/* Full/src_admin/App.css */
+
+/* --- Main Application Layout --- */
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  min-width: 0; /* Prevents overflow in flex layouts */
+  
+  /* --- FIX START --- */
+  /* Dynamically adjust width based on sidebar state */
+  width: calc(100vw - 250px); /* Default width when sidebar is open (250px) */
+  transition: width 0.3s ease-in-out; /* Smooth transition for main content width */
+  /* --- FIX END --- */
+}
+
+/* When the parent 'app' has the 'sidebar-closed' class, adjust main-content width */
+.app.sidebar-closed .main-content {
+  width: calc(100vw - 80px); /* Adjusted width when sidebar is closed (80px) */
+}
+
+.page-content-area {
+  flex-grow: 1;
+  padding: 1.5rem;
+  /* Ensure page content within main-content also respects boundaries */
+  box-sizing: border-box; 
+  width: 100%; /* Ensure it fills its parent main-content */
+}
+
+/* --- Responsive Design --- */
+/* The media query below handles mobile; the above fix is for desktop minimization. */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .page-content-area {
+    padding: 1rem;
+  }
+
+  /* For mobile, when sidebar is fixed, main-content should take full width */
+  .main-content {
+    width: 100vw; /* On mobile, main content should span full width */
+  }
+}

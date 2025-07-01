@@ -1,0 +1,135 @@
+/* --- Visually Appealing Filter Bar --- */
+.filter-bar-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  border: 1px solid #e0e0e0;
+}
+
+/* Updated styles for each filter group */
+.filter-group-visual {
+  flex: 1;
+  padding: 0.5rem 1.5rem;
+  border-right: 1px solid #f0f0f0;
+  position: relative;
+  display: flex;
+  /* This is the main change: align items horizontally */
+  flex-direction: row;
+  align-items: center; /* Vertically center the label and select */
+  gap: 0.75rem; /* Add space between the label and the select element */
+}
+.filter-group-visual:last-of-type {
+  border-right: none;
+}
+
+.filter-group-visual label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0; /* Remove bottom margin as they are side-by-side */
+}
+
+.filter-group-visual select {
+  flex-grow: 1; /* Allow the select to take the remaining space */
+  padding-right: 20px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Custom Dropdown Arrow */
+.filter-group-visual::after {
+    content: '˅';
+    font-size: 0.7rem;
+    color: #999;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-button-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.search-button-visual:hover {
+  background-color: #0097a7;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+}
+
+/* --- General Page Styles --- */
+.not-found-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 3rem;
+}
+
+.destination-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .destination-packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-bar-visual {
+    flex-direction: column;
+    border-radius: 16px;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .filter-group-visual {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem;
+  }
+  .filter-group-visual::after {
+      right: 1rem;
+  }
+  .filter-group-visual:last-of-type {
+    border-bottom: none;
+  }
+  .search-button-visual {
+    width: 100%;
+    border-radius: 8px;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .destination-packages-grid {
+    grid-template-columns: 1fr;
+  }
+}

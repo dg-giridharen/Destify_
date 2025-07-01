@@ -1,0 +1,170 @@
+/* --- Main Navbar Container --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9e9e9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* --- Left Side of the Navbar --- */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-menu-icon {
+    font-size: 1.25rem;
+    color: #5f6368;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.navbar-menu-icon:hover {
+    color: #000;
+}
+
+.navbar-page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- Right Side of the Navbar (Profile Menu) --- */
+.navbar-profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Reduced gap */
+}
+
+.navbar-action-icon {
+    font-size: 1.25rem;
+    color: #5f6368;
+}
+
+/* --- Notification Bell and Dropdown --- */
+.notification-container, .profile-container {
+    position: relative;
+}
+
+.icon-button, .profile-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.icon-button:hover, .profile-button:hover {
+    background-color: #f0f0f0;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: #d93025;
+    border-radius: 50%;
+    border: 1.5px solid white;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 320px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 11;
+}
+
+.notification-header {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+.notification-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.notification-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.notification-item:last-child {
+    border-bottom: none;
+}
+.notification-item:hover {
+    background-color: #f9f9f9;
+}
+.notification-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.notification-item small {
+    color: #777;
+}
+
+.no-notifications {
+    padding: 1.5rem;
+    text-align: center;
+    color: #999;
+}
+
+/* --- Profile Image and Dropdown --- */
+.profile-button {
+    gap: 0.5rem;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-dropdown-icon {
+    font-size: 0.8rem;
+    color: #5f6368;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 150px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    padding: 0.5rem;
+    z-index: 11;
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.dropdown-item:hover {
+    background-color: #f4f4f4;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,130 @@
+/* Full/src_admin/components/CalendarWidget/CalendarWidget.css */
+
+/* Main container for the widget */
+.calendar-widget {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* --- Overriding react-calendar default styles --- */
+.react-calendar {
+    width: 100%;
+    border: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+.react-calendar__navigation__label {
+    flex-grow: 0 !important;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    font-weight: 500;
+    color: #999;
+}
+
+.react-calendar__tile {
+    background: none;
+    border: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    color: #333;
+}
+
+.react-calendar__tile--neighboringMonth {
+    color: #ccc;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+    background-color: #f4f4f4;
+}
+
+.react-calendar__tile--active {
+    background-color: #8A2BE2;
+    color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+    background-color: #8A2BE2;
+}
+
+/* --- Custom Highlight Styles --- */
+/* This is the new class for highlighting booked dates */
+.highlight-booked {
+    background-color: #8B735C; /* A warm earthy brown */
+    color: white;
+    border-radius: 70%;
+}
+
+.highlight-booked:enabled:hover,
+.highlight-booked:enabled:focus {
+    background-color: #7a634e; /* Slightly darker brown on hover */
+}
+
+/* Existing highlights (if you still want them) */
+.highlight-green {
+    background-color: #20c997;
+    color: white;
+}
+
+.highlight-green:enabled:hover,
+.highlight-green:enabled:focus {
+    background-color: #1baa80;
+}
+
+.highlight-orange {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.highlight-orange:enabled:hover,
+.highlight-orange:enabled:focus {
+    background-color: #e86a00;
+}
+
+
+/* --- Responsive Adjustments for the Calendar --- */
+@media (max-width: 480px) {
+    .react-calendar__tile {
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    .calendar-widget {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,193 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1100;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+.logo-image {
+  height: 40px;
+}
+
+/* Desktop-specific link styling */
+.navbar-links-desktop {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links-desktop a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-trips-link {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-trips-link:hover {
+  color: #ff6f61;
+}
+
+.login-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.login-button:hover {
+  background-color: #e66054;
+  transform: translateY(-1px);
+}
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.arrow-down {
+  font-size: 0.7rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  z-index: 1100;
+  width: 150px;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Playfair Display', serif;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f4f4f4;
+}
+
+/* --- Mobile Menu Styles --- */
+
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #1a202c;
+  cursor: pointer;
+}
+
+.navbar-links-mobile {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Position it right below the navbar */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.navbar-links-mobile.active {
+  display: flex; /* Show the menu when active */
+}
+
+.navbar-links-mobile a {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #4a5568;
+}
+
+.mobile-menu-divider {
+  margin: 0.5rem 2rem;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.mobile-login-button,
+.mobile-logout-button {
+  text-align: center;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #4a5568;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mobile-logout-button {
+  color: #e78e56; /* Make logout stand out */
+  font-weight: bold;
+}
+
+
+/* --- Responsive Breakpoint --- */
+
+@media (max-width: 768px) {
+  .navbar-links-desktop,
+  .navbar-right-section {
+    display: none; /* Hide desktop links and right section */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+}

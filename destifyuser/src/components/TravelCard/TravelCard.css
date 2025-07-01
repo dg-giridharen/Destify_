@@ -1,0 +1,113 @@
+/* Main card container */
+.travel-card-visual {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.travel-card-visual:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-link-wrapper-visual {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+.card-image-container-visual {
+  position: relative;
+}
+
+.travel-card-image-visual {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.discount-badge-visual {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(29, 36, 47, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+.card-content-visual {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+.card-title-visual {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.card-footer-visual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+.card-destination-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.location-icon {
+  color: #ff6f61;
+}
+
+.card-price-visual {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+/* --- The Fix is Here --- */
+
+/* Make the container a centering parent */
+.card-button-container-visual {
+  padding-bottom: 1.5rem;
+  text-align: center; /* This will center any inline-block children */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Make the button an inline-block to be centered */
+.book-now-button-visual {
+  display: block; /* Changed from block */
+  width: auto; /* Width is now based on content + padding */
+  padding: 14px 2rem; /* Add horizontal padding to the button itself */
+  background-color: #f4f6f8;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.book-now-button-visual:hover {
+  background-color: #e9ecef;
+}

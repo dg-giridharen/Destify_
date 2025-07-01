@@ -1,0 +1,155 @@
+.carousel-container {
+  margin: 0 20px;
+}
+
+.slick-slide > div {
+  padding: 0 10px;
+}
+.hero-container{
+  background-color: #f6f2ee;
+}
+
+/* --- Hero Section Styles --- */
+.home-hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  background-color: #f6f2ee;
+  border-radius: 16px;
+}
+
+.home-hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.home-hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.home-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* --- Filter Bar Styles --- */
+.home-filter-bar-container {
+  max-width: 1000px;
+  /* This is the main change: Positive margin moves it down */
+  margin: 2rem auto 0; 
+  position: relative;
+  z-index: 10;
+}
+
+.filter-bar-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.filter-group-visual {
+  flex: 1;
+  padding: 0.5rem 1.5rem;
+  border-right: 1px solid #f0f0f0;
+  position: relative;
+}
+.filter-group-visual:last-of-type {
+  border-right: none;
+}
+
+.filter-group-visual label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.filter-group-visual select {
+  width: 100%;
+  padding-right: 20px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: #777;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter-group-visual::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: #999;
+    position: absolute;
+    right: 1.5rem;
+    top: 55%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-button-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.search-button-visual:hover {
+  background-color: #0097a7;
+}
+
+/* --- Carousel and General Styles --- */
+.section-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-top: 4rem; /* Adjusted margin */
+  margin-bottom: 3rem;
+}
+
+.carousel-container {
+  margin: 0 20px;
+}
+
+.carousel-slide {
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .home-hero-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .filter-bar-visual {
+    flex-direction: column;
+    border-radius: 16px;
+    align-items: stretch;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,95 @@
+.order-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.order-page h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.order-item {
+    display: grid;
+    /* Define the columns for the layout */
+    grid-template-columns: auto 1fr auto auto; /* Icon, Details, Amount, Status */
+    gap: 20px;
+    align-items: center; /* Vertically align items to the center */
+    border: 1px solid #e9e9e9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 14px;
+    color: #333;
+}
+
+.order-item-icon {
+    font-size: 1.8rem;
+    color: #ad490b; /* Use theme color */
+}
+
+.order-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-item-destinations {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.order-item-address, .order-item-phone {
+    color: #777;
+}
+
+.order-item-amount {
+    font-weight: 600;
+    font-size: 15px;
+    justify-self: center; /* Horizontally center amount */
+}
+
+.order-item select {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    width: 160px; /* A fixed width for the dropdown */
+    padding: 10px;
+    outline: none;
+    border-radius: 6px;
+    justify-self: end; /* Align dropdown to the very end */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .order-item {
+        /* Stack into two rows on tablets */
+        grid-template-columns: auto 1fr; /* Icon and Details */
+        row-gap: 15px;
+    }
+    .order-item-amount {
+        grid-column: 2 / 3; /* Span amount under details */
+        justify-self: start;
+    }
+    .order-item select {
+        grid-column: 2 / 3; /* Span select under details */
+        justify-self: start;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-page {
+        width: 95%;
+        padding: 1rem;
+    }
+    .order-item {
+        padding: 15px;
+        gap: 15px;
+    }
+}

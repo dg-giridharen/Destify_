@@ -1,0 +1,201 @@
+
+/* --- Main Grid Layout for the Dashboard --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.dashboard-main, .dashboard-sidebar {
+    min-width: 0; /* Prevents overflow by allowing grid items to shrink */
+}
+
+/* --- Welcome Banner Widget --- */
+.welcome-banner {
+    background: #63341f; /* A light blue color */
+    border-radius: 12px;
+    padding: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.welcome-text h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-text p {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    line-height: 1.6;
+}
+
+.welcome-text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* --- List Widget (Recruitment Progress / Recent Bookings) --- */
+.list-widget {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.list-widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.list-widget-header h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.view-all-btn {
+    background: #e0f7fa; /* Light blue */
+    color: #007bff; /* Darker blue */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Styles for the table-like list */
+.list-widget-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f1f1;
+    align-items: center;
+}
+
+.list-widget-row.header {
+    font-weight: 600;
+    color: #888;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.list-widget-row:last-child {
+    border-bottom: none;
+}
+
+.user-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    overflow-wrap: break-word;
+    min-width: 0;
+}
+
+.user-name-cell img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* --- Profile Widget --- */
+.profile-widget {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.profile-widget-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #e0f7fa;
+}
+
+.profile-widget h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.profile-widget span {
+    color: #888;
+    font-size: 14px;
+}
+
+.profile-widget hr {
+    border: none;
+    height: 1px;
+    background-color: #f1f1f1;
+    margin: 1rem 0;
+}
+
+.profile-info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1100px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-widget {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-banner {
+        padding: 1.5rem;
+    }
+    .welcome-text h3 {
+        font-size: 1.5rem;
+    }
+    .list-widget-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+        text-align: left;
+    }
+    .list-widget-row.header {
+        display: none;
+    }
+    .user-name-cell {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .list-widget-row p:nth-child(2)::before {
+        content: "Designation: ";
+        font-weight: 600;
+        color: #333;
+    }
+    .list-widget-row p:nth-child(3)::before {
+        content: "Status: ";
+        font-weight: 600;
+        color: #333;
+    }
+}

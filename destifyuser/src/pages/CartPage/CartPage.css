@@ -1,0 +1,231 @@
+/* Main two-column layout for the page */
+.cart-page-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Left Column: Package Details */
+.package-visual-details h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  text-align: left;
+}
+
+.location {
+  text-align: left;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.stock-alert {
+    background-color: #ffebee !important;
+    color: #c62828 !important;
+    font-weight: 500;
+}
+
+.image-gallery-cart .main-image-cart {
+  width: 100%;
+  border-radius: 16px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.description-section,
+.map-section {
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+.description-section h3,
+.map-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.description-section p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Right Column: Booking Summary Card */
+.booking-summary-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+.price-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.price-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+.price-header h2 span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+  margin-left: 5px;
+}
+
+.discount-badge {
+  background-color: #fff8e1;
+  color: #f59e0b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Booking Form (Dates and Guests) */
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.booking-form label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.booking-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.guest-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Cost Summary Section */
+.cost-summary {
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.total-cost {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* User Details Form Section */
+.user-details-form {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.user-details-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.user-details-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.user-details-form label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.user-details-form input,
+.user-details-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.user-details-form textarea {
+    resize: vertical;
+}
+
+/* Final Payment Button */
+.pay-now-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #c0a080;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  margin-top: 1.5rem;
+}
+.pay-now-button:hover {
+    background-color: #b19070;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .cart-page-content {
+    grid-template-columns: 1fr;
+  }
+}

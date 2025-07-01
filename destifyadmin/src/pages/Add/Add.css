@@ -1,0 +1,236 @@
+.add-page {
+    width: 90%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+/* Header Section with Title and Buttons */
+.add-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.add-page-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Styling for the Pill-Shaped Buttons */
+.btn-secondary, .btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    background-color: rgb(250, 184, 115);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: #f3dda7;
+    color: #4e3506;
+    border-color: #f3d5a7;
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-primary:hover {
+    background-color: #e8c492;
+}
+
+.btn-secondary:active, .btn-primary:active {
+    transform: scale(0.98);
+}
+
+
+/* Main Two-Column Layout */
+.add-page-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 2rem;
+}
+
+/* Reusable Card Style for Form Sections */
+.form-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #e9ecef;
+}
+
+.form-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* General Form Element Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Darker Grey Input Fields */
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #e9ecef;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline: none;
+    border: 1px solid #560bad;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Package Type Selector Buttons */
+.package-selector {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.package-selector button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e9ecef;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.package-selector button.active {
+    background-color: #a77628;
+    color: white;
+}
+
+/* --- Advanced Image Upload Section --- */
+
+/* Main Image Preview Area */
+.upload-main-preview {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.upload-main-preview img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Container for the thumbnails */
+.upload-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* Styling for each thumbnail image */
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 1/1; /* Makes the thumbnail a perfect square */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.thumbnail.active {
+    border-color: #560bad;
+}
+
+/* Styling for the "Add More" button */
+.add-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+    border: 2px dashed #ccc;
+    font-size: 2rem;
+    color: #888;
+}
+
+
+/* "Add Category" Button */
+.add-category-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background-color: #d1f7e0;
+    color: #1e8e3e;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 900px) {
+    .add-page-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .add-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .upload-thumbnails {
+        grid-template-columns: repeat(3, 1fr); /* Show 3 thumbnails per row on small screens */
+    }
+}
+@media (max-width: 420px) {
+    .add-page-header h2 {
+        font-size: 1.5rem;
+    }
+    .btn-secondary, .btn-primary {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
