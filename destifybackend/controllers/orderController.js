@@ -28,8 +28,8 @@ export const createCheckoutSession = async (req, res) => {
             payment_method_types: ["card"],
             line_items: line_items,
             mode: "payment",
-            success_url: `http://localhost:5174/trips?success=true`,
-            cancel_url: `http://localhost:5174/cart/${items[0]._id}?canceled=true`,
+            success_url: `https://destify-r6l0.onrender.com/trips?success=true`,
+            cancel_url: `https://destify-r6l0.onrender.com/cart/${items[0]._id}?canceled=true`,
         });
 
         // Create a new order with all the detailed fields before redirecting to payment
