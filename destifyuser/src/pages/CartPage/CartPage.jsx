@@ -20,7 +20,7 @@ const CartPage = () => {
     const { id } = useParams();
     const { currentUser } = useAuth();
     const navigate = useNavigate();
-    const url = "http://localhost:4000";
+    const url = "https://destify-backend-fxy3.onrender.com";
 
     // --- State Management ---
     const [isModalOpen, setIsModalOpen] = useState(false);
