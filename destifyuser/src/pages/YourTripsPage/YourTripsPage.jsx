@@ -11,7 +11,7 @@ const YourTripsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { currentUser } = useAuth();
   const [trips, setTrips] = useState([]);
-  const url = "http://localhost:4000";
+  const url = "https://destify-backend-fxy3.onrender.com";
 
   useEffect(() => {
     const fetchTrips = async () => {
