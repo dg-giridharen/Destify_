@@ -11,7 +11,7 @@ const AuthModal = ({ isOpen, onClose }) => {
   const [password, setPassword] = useState('');
   const [agreeTerms, setAgreeTerms] = useState(false);
   const { login } = useAuth();
-  const url = "http://localhost:4000"; // Your backend URL
+  const url = "https://destify-backend-fxy3.onrender.com"; // Your backend URL
 
   if (!isOpen) return null;
 
