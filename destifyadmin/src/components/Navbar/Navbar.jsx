@@ -7,7 +7,7 @@ import './Navbar.css';
 
 const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
   const navigate = useNavigate();
-  const url = "http://localhost:4000";
+  const url = "https://destify-backend-fxy3.onrender.com";
 
   // State for dropdowns and notifications
   const [showProfileMenu, setShowProfileMenu] = useState(false);
